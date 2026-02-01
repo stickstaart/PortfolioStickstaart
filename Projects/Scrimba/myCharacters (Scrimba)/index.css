@@ -1,0 +1,137 @@
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(to top left, rgb(5, 18, 41) , rgb(125, 126, 134));
+  font-family: 'Roboto', sans-serif;
+}
+
+.top-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+  background-color: black;
+  color: white;
+  padding-bottom: 25px;
+}
+
+.top-text h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.top-text p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.fat-text {
+  font-weight: 700;
+}
+
+.mycharacters-container {
+  background-color:slategray;
+  font-family: Baloo;
+  width: max-content;
+  max-width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+#emoji-container {
+  margin: 40px;
+  text-align: center;
+}
+
+#emoji-container span {
+  margin: 10px;
+  font-size: 60px;
+}
+
+#push-btn,
+#unshift-btn {
+  background-color: darkorange;
+}
+
+#shift-btn,
+#pop-btn {
+  font-weight: 300;
+  color: darkorange;
+  background-color: black;
+}
+
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  border: none;
+  height: 30px;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 40px;;
+}
+
+button {
+  font-family: Baloo;
+  letter-spacing: px;
+  background: darkcyan;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 0 4px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.home {
+  display: flex;
+  align-content: center;
+  position: absolute;
+  width: 5.3rem;
+  height: .8rem;
+  border-radius: 5px;
+  resize: none;
+  background-color: #FF713B;
+  background-image: linear-gradient(to left, #FF713B 0%, #FFA51D 100%);
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms, color 1000ms;
+  padding: 0.5em 1.25em;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.home:hover,
+.home:focus {
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 1);
+  color: black;
+  font-weight: 900;
+  transform: scale(1.1);
+}
+
+

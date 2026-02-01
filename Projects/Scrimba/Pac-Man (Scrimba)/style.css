@@ -1,0 +1,143 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: slategrey;
+}
+
+.top-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+  background-color: black;
+  color: white;
+  padding-bottom: 25px;
+}
+
+.top-text h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.top-text p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.fat-text {
+  font-weight: 900;
+}
+
+.score {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+#score {
+  font-weight: 900;
+}
+
+.pacman_game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  height: 420px;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+
+.grid div {
+  width: 15px;
+  height: 15px;
+}
+
+.pac-dot {
+  background-color: white;
+  border: 5px solid slategrey;
+  box-sizing: border-box;
+}
+
+.wall {
+  background-color: black;
+}
+
+.power-pellet {
+  background-color: darkorange;
+  border-radius: 7.5px;
+}
+
+.pacman {
+  background-color: darkorange;
+  border-radius: 7.5px;
+  border: none;
+
+}
+
+.blinky {
+  background-color: red;
+  border: none;
+}
+
+.pinky {
+  background-color: pink;
+  border: none;
+}
+
+.inky {
+  background-color:aqua;
+  border: none;
+}
+
+.clyde {
+  background-color: orange;
+  border: none;
+}
+
+.scared-ghost {
+  background-color: aquamarine;
+  border: none;
+}
+
+.home {
+  display: flex;
+  align-content: center;
+  position: absolute;
+  width: 5.5rem;
+  height: .8rem;
+  border-radius: 5px;
+  resize: none;
+  background-color: #FF713B;
+  background-image: linear-gradient(to left, #FF713B 0%, #FFA51D 100%);
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms, color 1000ms;
+  padding: 0.5em 1.25em;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.home:hover,
+.home:focus {
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 1);
+  color: black;
+  font-weight: 900;
+  transform: scale(1.1);
+}

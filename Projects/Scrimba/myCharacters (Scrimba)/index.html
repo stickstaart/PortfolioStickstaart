@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a class="home" href="..\index.html">return home</a>
+    <div class='top-text'><h1>myCHARACTERS</h1>
+      <div class="intro-text">
+        <p>Dit was een JavaScript oefening als onderdeel van <span class="fat-text">"The Front End Developer Career Path"</span></p>
+        <p>Oorspronkelijk waren de karakters in emojis, maar deze doen het niet op iedere browser, dus dat heb ik voor dit portfolio veranderd.</p>\
+      </div>
+      <div class="main-text">
+        <p>Typ een of meerdere karakters in het inputveld, en kies waar ze geplaatst moeten worden.</p> 
+        <p>Er is ook een mogelijkheid om karakters te verwijderen.</p>
+      </div>
+    </div>
+    <div class="mycharacters-container">
+      <div id="emoji-container"></div>
+      <input type="text" id="emoji-input" placeholder="type a character" />
+      <div class="buttons-wrapper push">
+        <button id="push-btn">Add to end</button>
+        <button id="unshift-btn">Add to beginning</button>
+      </div>
+      <div class="buttons-wrapper pop">
+        <button id="pop-btn">Remove from end</button>
+        <button id="shift-btn">Remove from beginning</button>
+      </div>
+  </div>
+  </body>
+</html>

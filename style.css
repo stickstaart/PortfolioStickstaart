@@ -1,0 +1,452 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 10pt;
+  height: 100vh;
+}
+
+.portfolio-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4fr 4fr;
+  grid-template-areas:
+    "name"
+    "contact"
+    "main1"
+    "projects";
+  grid-gap: 0px;
+}
+
+.name {
+  grid-area: name;
+  background-color: black;
+}
+
+.name h1 {
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+.name p {
+  text-transform: uppercase;
+  color: darkorange;
+  margin-top: 0;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: black;
+}
+
+.contact-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.icon {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+
+.icon:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 2px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.icon:active {
+  color: #000;
+}
+
+.icon:active:after {
+  background: transparent;
+}
+
+.icon:hover:before {
+  opacity: 1;
+}
+
+.icon:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.main1 {
+  padding: 20px;
+  grid-area: main1;
+  background-color: rgb(88, 86, 86, 80%);
+}
+
+.main1 h1 {
+  margin-top: 5px;
+  color: white;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.main1 h3 {
+  color: darkorange;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.main1 p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.main1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.main2 {
+  padding: 20px;
+  display: none;
+  grid-area: main2;
+  background-color: darkorange;
+}
+
+.main2 h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.main2 p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: WHITE;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  position: relative;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  flex: 1 1 calc(100% - 10px);
+  margin: 20px;
+  background: #e9d2ff;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-image: url("images/Screenshot\ 2022-06-06\ at\ 23-11-02\ Frontend\ Mentor\ Calculator\ app.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 500ms ease;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project2 {
+  background-image: url("images/Screenshot\ 2022-08-11\ at\ 12-47-33\ Frontend\ Mentor\ Interactive\ rating\ component.png");
+}
+
+.project3 {
+  background-image: url("images/Advice_Generator_SCRNSHT_1.png");
+}
+
+.project4 {
+  background-image: url("Filmzoeker/FilmZoekerSCRNSHT.png");
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  /* width: calc(100% - 10px);
+  height: calc(100% - 10px); */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  flex: 1;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+}
+
+.project:hover {
+  background-color: rgba(252, 249, 249, 0.8);
+  background-blend-mode: normal;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.project:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.project2,
+.project3,
+.project4 {
+  margin-top: 0px;
+}
+
+.project-title {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  padding: 0 10px;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.project-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: darkorange;
+  width: 100%;
+}
+
+.project-body {
+  margin-top: 0.1rem;
+  margin-bottom: 1.1rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.button {
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
+  background-color: darkorange;
+  color: black;
+  text-decoration: none;
+  align-self: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: white;
+}
+
+/*TABLET or LARGE PHONE*/
+
+@media screen and (min-width: 600px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 4fr;
+    grid-template-areas:
+      "name name"
+      "contact contact"
+      "main1 main1"
+      "projects projects";
+  }
+
+  .project {
+    margin: 20px;
+    flex: 1 0 calc(41% - 10px);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .project3,
+  .project4 {
+    margin-top: 0px;
+  }
+
+  .project2,
+  .project4 {
+    margin-left: 0px;
+  }
+
+  .project-title::after {
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+  }
+
+  .project:hover .project-title::after {
+    transform: scaleX(1);
+  }
+}
+
+/*BIG SCREENS, DESK- AND LAPTOPS*/
+
+@media screen and (min-width: 992px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr auto;
+    grid-template-areas:
+      "name name name contact"
+      "main1 main1 main2 main2"
+      "projects projects projects projects";
+  }
+
+  .contact-container {
+    justify-content: flex-end;
+  }
+
+  .name {
+    display: flex;
+  }
+
+  .name h1 {
+    margin-top: 0px;
+    justify-content: left;
+    margin-left: 20px;
+    align-self: center;
+  }
+
+  .name p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 67px;
+  }
+
+  .icon {
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  .main1 h1 {
+    justify-content: left;
+  }
+
+  .main1 p {
+    color: black;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .main1 h3 {
+    color: black;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .main1 {
+    /* background-image: url("images/JosVanDijk_EnProfile_vrijstaand_2022_clean.png");
+    background-position: 155%;
+    background-repeat: no-repeat;
+    background-size: 420px;
+    background-blend-mode: luminosity; */
+    background-color: rgb(211, 211, 211);
+  }
+
+  .main2 {
+    display: unset;
+  }
+
+  .main2 h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-top: 5px;
+    display: flex;
+    justify-content: left;
+  }
+
+  .main2 p {
+    display: flex;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  .projects {
+    overflow: hidden;
+  }
+
+  .project {
+    margin: 20px;
+    flex: 1 0 calc(21% - 10px);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .project2,
+  .project3,
+  .project4 {
+    margin-left: 0px;
+  }
+}

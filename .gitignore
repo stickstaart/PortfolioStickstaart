@@ -1,0 +1,5 @@
+echo "*.psd
+*.ai
+*.mov
+node_modules/
+.DS_Store" > .gitignore

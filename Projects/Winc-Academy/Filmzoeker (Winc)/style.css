@@ -1,0 +1,92 @@
+body,
+html {
+  background-color: black;
+}
+
+.home {
+  font-family: "Roboto";
+  display: flex;
+  align-content: center;
+  position: absolute;
+  width: 5.7rem;
+  height: .8rem;
+  border-radius: 5px;
+  resize: none;
+  background-color: #FF713B;
+  background-image: linear-gradient(to left, #FF713B 0%, #FFA51D 100%);
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms, color 1000ms;
+  padding: 0.5em 1.25em;
+  text-decoration: none;
+  margin-top: .8rem;
+  margin-left: 1rem;
+}
+
+.home:hover,
+.home:focus {
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 1);
+  color: black;
+  font-weight: 900;
+  transform: scale(1.1);
+}
+
+.header {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 45pt;
+  color: white;
+}
+
+.nav-box {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  margin: 30px;
+}
+
+#movieposters {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-item {
+  margin: 10px;
+}
+
+#movieposters img {
+  border-radius: 5px;
+  border-color: snow;
+  border: 1px;
+  border-style: solid;
+  height: 100%;
+  width: 100%;
+}
+
+#movieposters a:link {
+  color: white;
+}
+
+#movieposters a:visited {
+  color: darkgreen;
+}
+
+#movieposters a:hover {
+  color: deeppink;
+}
+
+#movieposters a:active {
+  color: gold;
+}

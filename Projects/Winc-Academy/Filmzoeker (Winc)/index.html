@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FilmZoeker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="DM.js"></script>
+    <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Baloo&display=swap"
+    rel="stylesheet"
+  />
+  </head>
+
+  <body>
+    <a class="home" href="..\index.html">return home</a>
+    <h1 class="header">Welkom bij de Winc Filmzoeker</h1>
+    <nav class="nav-box">
+      <div class="filter">
+        <input
+          type="radio"
+          id="new-movie"
+          name="movie-radio"
+          value="new-movie"
+        />
+        <label for="new-movie">New Movies, 2014 or newer</label>
+      </div>
+
+      <div class="filter">
+        <input type="radio" id="avengers" name="movie-radio" value="avengers" />
+        <label for="avengers">Avengers</label>
+      </div>
+
+      <div class="filter">
+        <input type="radio" id="x-men" name="movie-radio" value="x-men" />
+        <label for="x-men">X-Men</label>
+      </div>
+
+      <div class="filter">
+        <input type="radio" id="princess" name="movie-radio" value="princess" />
+        <label for="princess">Princess</label>
+      </div>
+
+      <div class="filter">
+        <input type="radio" id="batman" name="movie-radio" value="batman" />
+        <label for="batman">Batman</label>
+      </div>
+    </nav>
+    <main>
+      <ul id="movieposters"></ul>
+    </main>
+  </body>
+</html>

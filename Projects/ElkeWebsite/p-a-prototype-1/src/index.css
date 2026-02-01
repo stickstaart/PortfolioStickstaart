@@ -1,0 +1,111 @@
+/* Reset some browser default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Ensures body stretches to full height */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* A container that spans full width */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Optional: Constrain max width for large screens */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Full-width section for background elements or images */
+.full-width-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Change as needed */
+}
+
+/* Example navigation bar */
+nav {
+    width: 100%;
+    background: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Example full-width header */
+header {
+    width: 100%;
+    background: url('../../ComingSoonWebsiteElke/nature.jpg') no-repeat center center/cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.homescreen {
+    height: 100vh;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+header p {
+    font-size: 24px;
+    max-width: 600px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}

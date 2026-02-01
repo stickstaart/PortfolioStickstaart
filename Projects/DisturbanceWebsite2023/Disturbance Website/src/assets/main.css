@@ -1,0 +1,21 @@
+@import 'base.css';
+
+a {
+  text-decoration: none;
+  color: var(--disturbance-white);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: var(--disturbance-teal);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+}

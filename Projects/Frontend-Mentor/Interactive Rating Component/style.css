@@ -1,0 +1,442 @@
+:root {
+  /* PRIMARY */
+  --Orange: hsl(25, 97%, 53%);
+
+  /* NEUTRAL */
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: rgb(126, 137, 154);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+/* =========================================================================================================== */
+
+/* OVERALL CSS */
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--VeryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================================================================== */
+
+/* HEADER CSS START */
+
+.portfolio-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-areas:
+    "name"
+    "contact"
+    "irc";
+  grid-gap: 0px;
+}
+
+.name {
+  grid-area: name;
+  background-color: black;
+}
+
+.name h1 {
+  margin: 0;
+}
+
+.name a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.name a:hover {
+  -webkit-text-stroke: 1px darkorange;
+  text-shadow: 0 0 32px darkorange;
+}
+
+.name p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: darkorange;
+  margin-top: 0;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: black;
+}
+
+.contact-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.icon {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+
+.icon:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 2px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.icon:active {
+  color: #000;
+}
+
+.icon:active:after {
+  background: transparent;
+}
+
+.icon:hover:before {
+  opacity: 1;
+}
+
+.icon:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+* {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.irc-container {
+  grid-area: irc;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* RATING STATE CSS START */
+
+.irc-container-rating {
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--DarkBlue);
+  margin: 24px;
+  padding: 24px;
+  max-width: calc(375px - 48px);
+  min-width: calc(375px - 48px);
+  height: 365px;
+}
+
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(126, 137, 154, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.rating-header {
+  color: var(--White);
+  font-size: 25px;
+}
+
+.rating-paragraph {
+  color: var(--LightGrey);
+  line-height: 150%;
+  margin-bottom: 30px;
+  letter-spacing: -0.4px;
+}
+
+.rating-radios {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 19px;
+}
+
+.radio {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(126, 137, 154, 0.1);
+  color: var(--MediumGrey);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.radio:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.selected-radio {
+  background-color: var(--MediumGrey);
+  color: var(--White);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  all: unset;
+  background-color: var(--Orange);
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px var(--White);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+}
+
+.submit-btn:active {
+  box-shadow: inset 0 0 0 1px var(--White);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+  background-color: var(--LightGrey);
+  color: var(--White);
+}
+
+/* RATING STATE CSS END */
+
+/* =========================================================================================================== */
+
+/* THANK YOU STATE CSS START */
+
+.irc-container-thankyou {
+  border: 1px solid black;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--DarkBlue);
+  padding: 24px;
+  max-width: calc(375px - 48px);
+  min-width: calc(375px - 48px);
+  height: 365px;
+}
+
+.thankyou-img {
+  margin-bottom: 5px;
+}
+
+.youselectedtxt {
+  color: var(--Orange);
+  background-color: rgba(126, 137, 154, 0.1);
+  padding: 8px 16px 8px 16px;
+  border-radius: 1000px;
+  margin-bottom: 5px;
+}
+
+.thankyou {
+  color: var(--White);
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+
+.thankyou-txt {
+  text-align: center;
+  color: var(--LightGrey);
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  margin-bottom: 2px;
+}
+
+/* THANK YOU STATE CSS END */
+
+/* =========================================================================================================== */
+
+/*BIG SCREENS, DESK- AND LAPTOPS*/
+
+@media screen and (min-width: 992px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 8fr auto;
+    grid-template-areas:
+      "name name name contact"
+      "irc irc irc irc";
+  }
+
+  .contact-container {
+    justify-content: flex-end;
+  }
+
+  .name {
+    display: flex;
+  }
+
+  .name a {
+    margin-top: 20px;
+    justify-content: left;
+    margin-left: 20px;
+    align-self: center;
+  }
+
+  .name p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 67px;
+  }
+
+  .icon {
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+  .calculator-container {
+    grid-area: irc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: none;
+  }
+
+  .calculator-grid {
+    overflow: auto;
+  }
+  /* RATING STATE CSS START */
+
+  .irc-container-rating {
+    border-radius: 30px;
+    max-width: calc(400px);
+    height: 400px;
+    min-width: calc(400px);
+  }
+
+  .star-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rating-paragraph {
+    letter-spacing: 0px;
+  }
+
+  .radio {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  /* RATING STATE CSS END */
+
+  /* THANK YOU STATE CSS START */
+
+  .irc-container-thankyou {
+    border-radius: 30px;
+    padding: 24px;
+    max-width: calc(400px);
+    min-width: calc(400px);
+    height: 400px;
+  }
+
+  .thankyou-txt {
+    letter-spacing: 0.2px;
+  }
+
+  /* THANK YOU STATE CSS END */
+}
