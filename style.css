@@ -208,7 +208,7 @@ body {
   background: #e9d2ff;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
-  background-image: url("images/Screenshot\ 2022-06-06\ at\ 23-11-02\ Frontend\ Mentor\ Calculator\ app.png");
+  background-image: url("images/Screenshot 2022-06-06 at 23-11-02 Frontend Mentor Calculator app.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -218,7 +218,7 @@ body {
 }
 
 .project2 {
-  background-image: url("images/Screenshot\ 2022-08-11\ at\ 12-47-33\ Frontend\ Mentor\ Interactive\ rating\ component.png");
+  background-image: url("/images/Screenshot 2022-08-11 at 12-47-33 Frontend Mentor Interactive rating component.png");
 }
 
 .project3 {
@@ -226,7 +226,7 @@ body {
 }
 
 .project4 {
-  background-image: url("Filmzoeker/FilmZoekerSCRNSHT.png");
+  background-image: url("Projects/DisturbanceWebsite2023/Disturbance Website/public/BG_Tox_Website.png");
 }
 
 .project-content {
