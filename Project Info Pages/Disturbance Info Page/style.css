@@ -149,25 +149,36 @@ body {
 }
 
 .main1 {
-  padding: 20px;
-  grid-area: main1;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  text-align: center;
-  font-weight: 300;
+    padding: 20px;
+    grid-area: main1;
+    margin-top: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
 }
 
 .project-container {
-  border: 0.3px solid black;
-  display: flex;
-  justify-self: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  min-width: 300px;
-  min-height: 300px;
-  background-color: #d0d0ce;
+    border: 0.3px solid black;
+    display: flex;
+    justify-self: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #d0d0ce;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-image: url("/Projects/DisturbanceWebsite2023/Disturbance Website/public/1200x1200-Disturbance_Tox_Pupuli_cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 500ms ease;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .project-links {
