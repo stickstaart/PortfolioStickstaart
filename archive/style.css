@@ -208,7 +208,7 @@ body {
   background: #e9d2ff;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
-  background-image: url("images/Screenshot 2022-06-06 at 23-11-02 Frontend Mentor Calculator app.png");
+  background-image: url("../images/Screenshot 2022-06-06 at 23-11-02 Frontend Mentor Calculator app.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,11 +222,11 @@ body {
 }
 
 .project3 {
-  background-image: url("images/Advice_Generator_SCRNSHT_1.png");
+  background-image: url("../images/Advice_Generator_SCRNSHT_1.png");
 }
 
 .project4 {
-  background-image: url("Projects/DisturbanceWebsite2023/Disturbance Website/public/BG_Tox_Website.png");
+  background-image: url("../Projects/DisturbanceWebsite2023/Disturbance Website/public/BG_Tox_Website.png");
 }
 
 .project-content {
