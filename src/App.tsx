@@ -21,11 +21,11 @@ function App() {
       <Container maxWidth="sm">
         <div ref={boxRef} className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-2xl text-center">
 
-          <Typography variant="h3" component="h1" gutterBottom className="font-bold tracking-tighter">
+          <Typography ref={textRef} variant="h3" component="h1" gutterBottom className="font-bold tracking-tighter">
             V2 is <span className="text-sky-400">Live</span>
           </Typography>
 
-          <Typography variant="body1" className="text-slate-400 mb-8">
+          <Typography ref={textRef} variant="body1" className="text-slate-400 mb-8">
             React 19 + MUI + Tailwind 4 + GSAP zijn succesvol gekoppeld in PhpStorm.
           </Typography>
 
