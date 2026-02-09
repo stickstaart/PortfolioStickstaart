@@ -1,48 +1,103 @@
-import { useEffect, useRef } from 'react';
-import { Button, Container, Typography, Box } from '@mui/material';
-import { RocketLaunch } from '@mui/icons-material';
+import { useEffect, useRef} from 'react';
+import { Typography, Button, Container, Box, Stack } from '@mui/material';
+import { ArrowForward, Code } from '@mui/icons-material';
 import gsap from 'gsap';
+import MagneticButton from './components/MagneticButton';
 
-function App() {
-  const boxRef = useRef(null);
-  const textRef = useRef(null);
+export default function App() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const blobRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef(null);
+
+  // Parallax effect functie
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY } = e;
+
+    // Bereken afstand vanuit het midden
+    const xPos = (clientX / window.innerWidth - 0.5) * 40;
+    const yPos = (clientY / window.innerHeight - 0.5) * 40;
+
+    // Beweeg de achtergrond-blob subtiel
+    gsap.to(blobRef.current, {
+      x: xPos,
+      y: yPos,
+      duration: 1,
+      ease: "power2.out"
+    });
+  };
 
   useEffect(() => {
-    // GSAP Animatie test
-    gsap.fromTo(boxRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, ease: "power4.out", delay: 0.5 }
-    );
+    const ctx = gsap.context(() => {
+      gsap.from(titleRef.current, {
+        y: 60,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.3
+      });
+
+      // Zweef-animatie voor de blob (onafhankelijk van muis)
+      gsap.to(blobRef.current, {
+        scale: 1.2,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+    }, containerRef);
+    return () => ctx.revert();
   }, []);
 
   return (
-    // Tailwind voor de achtergrond en layout
-    <Box className="min-h-screen bg-slate-900 flex items-center justify-center text-white">
-      <Container maxWidth="sm">
-        <div ref={boxRef} className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-2xl text-center">
+    <Box
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen bg-[#0a192f] flex items-center justify-center overflow-hidden"
+    >
+      {/* De Parallax Blob op de achtergrond */}
+      <div
+        ref={blobRef}
+        className="absolute w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none"
+        style={{ top: '20%', left: '30%' }}
+      />
 
-          <Typography ref={textRef} variant="h3" component="h1" gutterBottom className="font-bold tracking-tighter">
-            V2 is <span className="text-sky-400">Live</span>
+      <Container maxWidth="md" className="relative z-10">
+        <Stack spacing={4} alignItems="center" className="text-center">
+
+          <div className="px-4 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-sm font-mono mb-4">
+            <Code className="align-middle mr-2" fontSize="small" />
+            Interactive v2.0
+          </div>
+
+          <Typography
+            ref={titleRef}
+            variant="h1"
+            className="text-white font-extrabold tracking-tight"
+            sx={{ fontSize: { xs: '3rem', md: '5rem' } }}
+          >
+            Creative <span className="text-sky-400">Developer</span>
           </Typography>
 
-          <Typography ref={textRef} variant="body1" className="text-slate-400 mb-8">
-            React 19 + MUI + Tailwind 4 + GSAP zijn succesvol gekoppeld in PhpStorm.
+          <Typography variant="h5" className="text-slate-400 max-w-2xl">
+            Ik bouw interactieve interfaces waar code en design elkaar ontmoeten.
           </Typography>
 
-          {/* MUI Button met een Icon */}
+<MagneticButton>
           <Button
             variant="contained"
             size="large"
-            startIcon={<RocketLaunch />}
-            onClick={() => gsap.to(boxRef.current, { rotation: 360, duration: 1 })}
-            sx={{ borderRadius: '12px', textTransform: 'none', fontWeight: 'bold' }}
+            endIcon={<ArrowForward />}
+            sx={{
+              bgcolor: '#38bdf8',
+              '&:hover': { bgcolor: '#0ea5e9' },
+              px: 4, py: 1.5, borderRadius: '8px', mt: 4
+            }}
           >
-            Lanceer Animatie
+            Projecten ontdekken
           </Button>
-        </div>
+</MagneticButton>
+        </Stack>
       </Container>
     </Box>
   );
 }
-
-export default App;
